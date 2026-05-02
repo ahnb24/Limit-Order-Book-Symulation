@@ -1,6 +1,6 @@
 # 📊 Limit Order Book Simulation with Agent-Based Modelling
 
-## 1. Limit Order Book (LOB) Environment
+## Limit Order Book (LOB) Environment
 
 We simulate a **continuous double-auction limit order book (LOB)** where agents submit buy/sell limit orders.
 
@@ -41,7 +41,7 @@ M_t = \frac{\text{best bid}_t + \text{best ask}_t}{2}
 
 ---
 
-## 2. Zero-Intelligence Traders (ZIT)
+## Zero-Intelligence Traders (ZIT)
 
 ZIT agents follow **random but rational (no-loss) rules**.
 
@@ -63,7 +63,7 @@ c_i \sim U(P_f - S, P_f), \quad a_i \sim U(c_i, P_{\max})
 
 ---
 
-## 3. Behavioural Traders (BT)
+## Behavioural Traders (BT)
 
 Behavioural traders form expectations using **fundamental + technical + noise signals**.
 
@@ -169,7 +169,7 @@ P^t_{e,j} = P^{t-1} \cdot \exp(r^t_{e,j})
 
 ---
 
-## 4. Return Construction
+## Return Construction
 
 Returns are computed using **non-overlapping windows**:
 
@@ -199,7 +199,7 @@ for lags ( \ell = 1,...,6 )
 
 ---
 
-## 5. Real Market Benchmark
+## Real Market Benchmark
 
 Compared with:
 
@@ -212,44 +212,4 @@ Metrics:
 
 ---
 
-## 6. Learning Process
 
-Agents adapt weights dynamically.
-
-### 📐 Learning Rule
-
-Weights are updated based on signal agreement:
-
-* If signals agree → increase weight
-* If signals disagree → decrease weight
-
-Example update:
-
-[
-w_{i,j} \leftarrow w_{i,j} + k \cdot r'*{i,j} \cdot w*{i,j}
-]
-
-or
-
-[
-w_{i,j} \leftarrow w_{i,j} - k \cdot r'*{i,j} \cdot w*{i,j}
-]
-
----
-
-### 🔧 Learning Parameters
-
-| Parameter | Value  | Description       |
-| --------- | ------ | ----------------- |
-| ( k_j )   | 4      | Learning rate     |
-| ( m_j )   | 0.01   | Noise probability |
-| ( t_l )   | 10,000 | Evaluation window |
-
----
-
-
-If you want next level (very important for jobs), I can:
-
-* 🔥 Turn this into a **clean GitHub README with diagrams**
-* 🎯 Convert this into **CV bullet (top 1% quality)**
-* 💼 Prepare how to **explain this in interviews (very important)**
