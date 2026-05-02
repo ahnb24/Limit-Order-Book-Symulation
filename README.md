@@ -1,5 +1,18 @@
 # 📊 Limit Order Book Simulation with Agent-Based Modelling
 
+## 🎯 Project Aim
+
+This project builds an **agent-based simulation of a limit order book (LOB)** to study how different types of traders generate realistic financial market dynamics.
+
+Starting from **Zero-Intelligence Traders (ZIT)** and extending to **Behavioural Traders (BT)**, the model investigates how micro-level trading rules lead to:
+
+- Price formation  
+- Volatility clustering  
+- Fat-tailed return distributions  
+
+The simulated results are benchmarked against **real S&P 500 data** to evaluate how well the model reproduces key stylized facts of financial markets.
+
+
 ## Limit Order Book (LOB) Environment
 
 We simulate a **continuous double-auction limit order book (LOB)** where agents submit buy/sell limit orders.
