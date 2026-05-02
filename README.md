@@ -6,14 +6,17 @@ We simulate a **continuous double-auction limit order book (LOB)** where agents 
 
 ### 🔁 Matching Rules
 
-* Buy executes if:
-  [
-  P_{\text{buy}} \geq \text{best ask}
-  ]
-* Sell executes if:
-  [
-  P_{\text{sell}} \leq \text{best bid}
-  ]
+- Buy executes if:
+
+$$
+P_{\text{buy}} \geq \text{best ask}
+$$
+
+- Sell executes if:
+
+$$
+P_{\text{sell}} \leq \text{best bid}
+$$
 
 ### 📈 Mid Price
 
